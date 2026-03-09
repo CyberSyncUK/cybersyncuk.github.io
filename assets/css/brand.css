@@ -176,20 +176,11 @@ article strong {
 }
 
 .pillar-card {
-	display: grid;
-	grid-template-columns: 2rem 1fr;
-	gap: 0.8rem;
-	align-items: start;
 	background: rgba(13, 27, 62, 0.5);
 	border: 1px solid rgba(0, 168, 232, 0.15);
+	border-left: 3px solid #00A8E8;
 	border-radius: 6px;
 	padding: 0.9rem 1rem;
-}
-
-.pillar-icon {
-	font-size: 1.2rem;
-	line-height: 1;
-	padding-top: 0.1rem;
 }
 
 .pillar-card strong {
@@ -199,7 +190,7 @@ article strong {
 	letter-spacing: 0.04em;
 	color: #4FC3F7;
 	display: block;
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.25rem;
 }
 
 .pillar-card p {
