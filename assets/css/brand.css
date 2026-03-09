@@ -91,9 +91,17 @@ article strong {
 #header nav ul li a {
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 600;
-	font-size: 0.75rem;
-	letter-spacing: 0.1em;
+	font-size: 0.68rem;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
+}
+
+/* Keep 6-item nav tidy */
+#header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.3rem;
 }
 
 #footer {
