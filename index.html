@@ -16,6 +16,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/brand.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 /* ─── CyberSync UK Brand Styles ─── */
@@ -333,8 +334,8 @@ article p.lead-text {
 		<div id="wrapper">
 
 			<header id="header">
-				<div class="logo">
-					<span class="icon solid fa-shield-alt fa-lg" style="color: #00A8E8;"></span>
+				<div class="logo logo-img">
+					<img src="images/logo_shield.png" alt="CyberSync UK Shield Logo" class="header-logo" />
 				</div>
 				<div class="content">
 					<div class="inner">
@@ -593,6 +594,11 @@ article p.lead-text {
 
 		</div>
 
+		<button class="dark-mode-toggle" id="darkModeToggle" onclick="toggleDarkMode()" title="Toggle deep dark mode">
+			<span class="toggle-icon">🌑</span>
+			<span class="toggle-label">Deep Dark</span>
+		</button>
+
 		<div id="bg"></div>
 
 		<script src="assets/js/jquery.min.js"></script>
@@ -601,5 +607,28 @@ article p.lead-text {
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 
-	</body>
+	<script>
+		function toggleDarkMode() {
+			const body = document.body;
+			const btn = document.getElementById('darkModeToggle');
+			const icon = btn.querySelector('.toggle-icon');
+			const label = btn.querySelector('.toggle-label');
+			const isDark = body.classList.toggle('deep-dark');
+			icon.textContent = isDark ? '☀️' : '🌑';
+			label.textContent = isDark ? 'Light Mode' : 'Deep Dark';
+			localStorage.setItem('cybersync-dark', isDark ? '1' : '0');
+		}
+		// Restore preference on load
+		if (localStorage.getItem('cybersync-dark') === '1') {
+			document.body.classList.add('deep-dark');
+			document.addEventListener('DOMContentLoaded', function() {
+				const btn = document.getElementById('darkModeToggle');
+				if (btn) {
+					btn.querySelector('.toggle-icon').textContent = '☀️';
+					btn.querySelector('.toggle-label').textContent = 'Light Mode';
+				}
+			});
+		}
+	</script>
+</body>
 </html>
