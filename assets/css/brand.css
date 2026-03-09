@@ -1,11 +1,14 @@
 /*
-	CyberSync UK — Brand Stylesheet
-	Sits on top of Dimension (main.css)
-	Fonts: Rajdhani, Exo 2, Inter (Google Fonts)
-	Palette: Deep Navy #0D1B3E | Electric Blue #00A8E8 | Cyan #4FC3F7
+	CyberSync UK — brand.css
+	Overrides and additions for the Dimension (HTML5 UP) template
+	Fonts: Rajdhani (700) · Exo 2 (400/600/700) · Inter (300/400/500)
+	Palette: Deep Navy #0D1B3E · Electric Blue #00A8E8 · Cyan #4FC3F7
+	─────────────────────────────────────────────────────────────────
 */
 
-/* ─── Typography Overrides ─── */
+/* ═══════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════ */
 
 #header .brand-heading {
 	font-family: 'Rajdhani', sans-serif;
@@ -57,7 +60,7 @@ article h2.major::after {
 article h3 {
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 600;
-	font-size: 1.05rem;
+	font-size: 1rem;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #4FC3F7;
@@ -85,7 +88,52 @@ article strong {
 	font-weight: 600;
 }
 
-/* ─── Mission Block ─── */
+#header nav ul li a {
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 600;
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#footer {
+	font-family: 'Inter', sans-serif;
+	font-size: 0.78rem;
+	letter-spacing: 0.02em;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+/* ═══════════════════════════════════════
+   HEADER LOGO
+═══════════════════════════════════════ */
+
+#header .logo.logo-img {
+	width: auto;
+	height: auto;
+	border: none;
+	background: none;
+	border-radius: 0;
+	line-height: 1;
+	margin-bottom: 1.2rem;
+}
+
+.header-logo {
+	width: 120px;
+	height: auto;
+	filter: drop-shadow(0 2px 12px rgba(0, 168, 232, 0.3));
+	opacity: 0.95;
+	transition: opacity 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.header-logo:hover {
+	opacity: 1;
+	transform: scale(1.04);
+	filter: drop-shadow(0 4px 18px rgba(0, 168, 232, 0.55));
+}
+
+/* ═══════════════════════════════════════
+   MISSION BLOCK (About)
+═══════════════════════════════════════ */
 
 .mission-block {
 	display: flex;
@@ -112,7 +160,7 @@ article strong {
 .mission-item strong {
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 700;
-	font-size: 0.95rem;
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	color: #00A8E8;
@@ -123,10 +171,12 @@ article strong {
 .mission-item p {
 	margin: 0;
 	font-size: 0.88rem;
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.6);
 }
 
-/* ─── Threat Grid ─── */
+/* ═══════════════════════════════════════
+   THREAT GRID (For Your Business)
+═══════════════════════════════════════ */
 
 .threat-grid {
 	display: grid;
@@ -151,7 +201,7 @@ article strong {
 
 .threat-card strong {
 	font-family: 'Exo 2', sans-serif;
-	font-size: 0.85rem;
+	font-size: 0.82rem;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	color: #ffffff;
@@ -160,32 +210,35 @@ article strong {
 }
 
 .threat-card p {
-	font-size: 0.83rem;
+	font-size: 0.82rem;
 	line-height: 1.5;
 	color: rgba(255, 255, 255, 0.6);
 	margin: 0;
 }
 
-/* ─── Pillar Grid ─── */
+/* ═══════════════════════════════════════
+   PILLAR GRID (For IT Pros)
+   Simple flex — no grid, no emoji columns
+═══════════════════════════════════════ */
 
 .pillar-grid {
 	display: flex;
 	flex-direction: column;
-	gap: 0.8rem;
+	gap: 0.75rem;
 	margin: 1rem 0 1.5rem;
 }
 
 .pillar-card {
-	background: rgba(13, 27, 62, 0.5);
+	background: rgba(13, 27, 62, 0.6);
 	border: 1px solid rgba(0, 168, 232, 0.15);
 	border-left: 3px solid #00A8E8;
-	border-radius: 6px;
-	padding: 0.9rem 1rem;
+	border-radius: 0 6px 6px 0;
+	padding: 0.85rem 1rem;
 }
 
 .pillar-card strong {
 	font-family: 'Exo 2', sans-serif;
-	font-size: 0.88rem;
+	font-size: 0.85rem;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	color: #4FC3F7;
@@ -194,25 +247,27 @@ article strong {
 }
 
 .pillar-card p {
-	font-size: 0.83rem;
+	font-size: 0.82rem;
 	line-height: 1.5;
 	color: rgba(255, 255, 255, 0.6);
 	margin: 0;
 }
 
-/* ─── Platform Grid (Content Hub) ─── */
+/* ═══════════════════════════════════════
+   PLATFORM GRID (Content Hub)
+═══════════════════════════════════════ */
 
 .platform-grid {
 	display: flex;
 	flex-direction: column;
-	gap: 0.8rem;
+	gap: 0.75rem;
 	margin: 0.5rem 0 1.5rem;
 }
 
 .platform-card {
 	display: grid;
 	grid-template-columns: 2.5rem 1fr;
-	gap: 0.8rem;
+	gap: 0.75rem;
 	align-items: start;
 	background: rgba(0, 168, 232, 0.06);
 	border: 1px solid rgba(0, 168, 232, 0.18);
@@ -228,14 +283,14 @@ article strong {
 }
 
 .platform-card .icon {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	color: #00A8E8;
-	padding-top: 0.15rem;
+	padding-top: 0.1rem;
 }
 
 .platform-card strong {
 	font-family: 'Exo 2', sans-serif;
-	font-size: 0.9rem;
+	font-size: 0.88rem;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	color: #ffffff;
@@ -244,13 +299,24 @@ article strong {
 }
 
 .platform-card p {
-	font-size: 0.83rem;
+	font-size: 0.82rem;
 	line-height: 1.5;
 	color: rgba(255, 255, 255, 0.6);
 	margin: 0;
 }
 
-/* ─── Topic Tags ─── */
+/* Blog card gets a slightly warmer accent */
+.platform-card--blog {
+	border-color: rgba(79, 195, 247, 0.25);
+}
+
+.platform-card--blog .icon {
+	color: #4FC3F7;
+}
+
+/* ═══════════════════════════════════════
+   TOPIC TAGS
+═══════════════════════════════════════ */
 
 .topics-block {
 	margin-top: 1.2rem;
@@ -267,7 +333,7 @@ article strong {
 
 .topic-tags li {
 	font-family: 'Exo 2', sans-serif;
-	font-size: 0.75rem;
+	font-size: 0.72rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -278,13 +344,15 @@ article strong {
 	padding: 0.25rem 0.6rem;
 }
 
-/* ─── CTA Block ─── */
+/* ═══════════════════════════════════════
+   CTA BLOCK
+═══════════════════════════════════════ */
 
 .cta-block {
-	background: rgba(0, 168, 232, 0.07);
+	background: rgba(0, 168, 232, 0.06);
 	border: 1px solid rgba(0, 168, 232, 0.2);
 	border-left: 3px solid #00A8E8;
-	border-radius: 4px;
+	border-radius: 0 4px 4px 0;
 	padding: 1rem 1.2rem;
 	margin-top: 1.5rem;
 }
@@ -309,7 +377,126 @@ article strong {
 	padding: 0;
 }
 
-/* ─── Contact Select Field ─── */
+/* ═══════════════════════════════════════
+   BLOG FEED (Live Hashnode posts)
+═══════════════════════════════════════ */
+
+.blog-feed {
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	margin: 0.5rem 0;
+}
+
+.blog-loading {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	color: rgba(255, 255, 255, 0.45);
+	font-family: 'Inter', sans-serif;
+	font-size: 0.88rem;
+	padding: 1rem 0;
+}
+
+.blog-loading .icon {
+	color: #00A8E8;
+	font-size: 1rem;
+}
+
+.blog-card {
+	display: block;
+	background: rgba(13, 27, 62, 0.55);
+	border: 1px solid rgba(0, 168, 232, 0.15);
+	border-radius: 6px;
+	padding: 1rem 1.1rem;
+	text-decoration: none;
+	transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.blog-card:hover {
+	background: rgba(0, 168, 232, 0.1);
+	border-color: rgba(0, 168, 232, 0.35);
+	transform: translateX(3px);
+}
+
+.blog-card__meta {
+	display: flex;
+	gap: 0.8rem;
+	margin-bottom: 0.45rem;
+}
+
+.blog-card__date,
+.blog-card__read {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 0.7rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: rgba(0, 168, 232, 0.7);
+}
+
+.blog-card__read::before {
+	content: '·';
+	margin-right: 0.8rem;
+	opacity: 0.5;
+}
+
+.blog-card__title {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 0.95rem;
+	font-weight: 700;
+	color: #ffffff;
+	display: block;
+	margin-bottom: 0.35rem;
+	line-height: 1.35;
+}
+
+.blog-card__brief {
+	font-size: 0.82rem;
+	line-height: 1.55;
+	color: rgba(255, 255, 255, 0.55);
+	margin: 0 0 0.5rem;
+	/* Truncate to 2 lines */
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.blog-card__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin-top: 0.4rem;
+}
+
+.blog-tag {
+	font-family: 'Exo 2', sans-serif;
+	font-size: 0.65rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #4FC3F7;
+	background: rgba(79, 195, 247, 0.1);
+	border: 1px solid rgba(79, 195, 247, 0.2);
+	border-radius: 3px;
+	padding: 0.15rem 0.45rem;
+}
+
+.blog-error {
+	padding: 0.75rem 0;
+	color: rgba(255, 255, 255, 0.5);
+	font-family: 'Inter', sans-serif;
+	font-size: 0.88rem;
+}
+
+.blog-error p {
+	margin-bottom: 0.6rem;
+}
+
+/* ═══════════════════════════════════════
+   CONTACT SELECT
+═══════════════════════════════════════ */
 
 #contact select {
 	width: 100%;
@@ -329,54 +516,9 @@ article strong {
 	color: #ffffff;
 }
 
-/* ─── Footer ─── */
-
-#footer {
-	font-family: 'Inter', sans-serif;
-	font-size: 0.78rem;
-	color: rgba(255, 255, 255, 0.4);
-	letter-spacing: 0.02em;
-}
-
-/* ─── Nav overrides ─── */
-
-#header nav ul li a {
-	font-family: 'Exo 2', sans-serif;
-	font-weight: 600;
-	font-size: 0.78rem;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-}
-
-/* ─── Logo Image ─── */
-
-#header .logo.logo-img {
-	/* Override the default circular logo container */
-	width: auto;
-	height: auto;
-	border: none;
-	background: none;
-	border-radius: 0;
-	line-height: 1;
-	margin-bottom: 1.2rem;
-}
-
-.header-logo {
-	width: 120px;
-	height: auto;
-	/* True transparent PNG - no blend mode needed */
-	filter: drop-shadow(0 2px 12px rgba(0, 168, 232, 0.3));
-	opacity: 0.95;
-	transition: opacity 0.2s, transform 0.2s, filter 0.2s;
-}
-
-.header-logo:hover {
-	opacity: 1;
-	transform: scale(1.04);
-	filter: drop-shadow(0 4px 18px rgba(0, 168, 232, 0.55));
-}
-
-/* ─── Dark Mode Toggle ─── */
+/* ═══════════════════════════════════════
+   DARK MODE TOGGLE
+═══════════════════════════════════════ */
 
 .dark-mode-toggle {
 	position: fixed;
@@ -406,37 +548,16 @@ article strong {
 	border-color: rgba(0, 168, 232, 0.6);
 }
 
-.dark-mode-toggle .toggle-icon {
-	font-size: 0.9rem;
-}
-
-/* ─── Dark Mode Overrides ─── */
-/* The Dimension template is already dark by default.
-   "Dark mode" for IT pros here means DEEPER dark — richer contrast,
-   more terminal-like feel. */
-
-body.deep-dark {
-	--dm-bg: #020810;
-	--dm-panel: rgba(2, 8, 16, 0.97);
-	--dm-accent: #00E5FF;
-	--dm-border: rgba(0, 229, 255, 0.2);
-}
+/* ═══════════════════════════════════════
+   DEEP DARK MODE
+═══════════════════════════════════════ */
 
 body.deep-dark #bg {
 	filter: brightness(0.4) saturate(0.6);
 }
 
-body.deep-dark #wrapper {
-	background: rgba(2, 8, 16, 0.6);
-}
-
-body.deep-dark #header {
-	background: rgba(2, 8, 16, 0.5);
-}
-
 body.deep-dark article {
 	background: rgba(2, 8, 16, 0.97) !important;
-	border-color: rgba(0, 229, 255, 0.15) !important;
 }
 
 body.deep-dark article h2.major::after {
@@ -453,23 +574,19 @@ body.deep-dark #header .brand-tagline {
 }
 
 body.deep-dark .pillar-card {
-	background: rgba(0, 20, 30, 0.8);
-	border-color: rgba(0, 229, 255, 0.2);
+	background: rgba(0, 15, 25, 0.8);
 	border-left-color: #00E5FF;
+	border-color: rgba(0, 229, 255, 0.2);
 }
 
-body.deep-dark .pillar-card strong {
-	color: #00E5FF;
-}
+body.deep-dark .pillar-card strong { color: #00E5FF; }
 
 body.deep-dark .threat-card {
 	background: rgba(0, 229, 255, 0.04);
 	border-color: rgba(0, 229, 255, 0.15);
 }
 
-body.deep-dark .threat-card .icon {
-	color: #00E5FF;
-}
+body.deep-dark .threat-card .icon { color: #00E5FF; }
 
 body.deep-dark .platform-card {
 	background: rgba(0, 229, 255, 0.04);
@@ -481,9 +598,20 @@ body.deep-dark .platform-card:hover {
 	border-color: rgba(0, 229, 255, 0.35);
 }
 
-body.deep-dark .platform-card .icon {
-	color: #00E5FF;
+body.deep-dark .platform-card .icon { color: #00E5FF; }
+
+body.deep-dark .blog-card {
+	background: rgba(0, 15, 25, 0.7);
+	border-color: rgba(0, 229, 255, 0.15);
 }
+
+body.deep-dark .blog-card:hover {
+	background: rgba(0, 229, 255, 0.07);
+	border-color: rgba(0, 229, 255, 0.3);
+}
+
+body.deep-dark .blog-card__date,
+body.deep-dark .blog-card__read { color: rgba(0, 229, 255, 0.65); }
 
 body.deep-dark .cta-block {
 	border-left-color: #00E5FF;
@@ -497,11 +625,9 @@ body.deep-dark .topic-tags li {
 	border-color: rgba(0, 229, 255, 0.2);
 }
 
-body.deep-dark .mission-icon {
-	color: #00E5FF;
-}
+body.deep-dark .mission-icon { color: #00E5FF; }
 
-/* Scanline overlay for deep dark - subtle terminal feel */
+/* Subtle scanline overlay */
 body.deep-dark::after {
 	content: '';
 	position: fixed;
@@ -517,7 +643,9 @@ body.deep-dark::after {
 	z-index: 9998;
 }
 
-/* ─── Responsive: narrow screens collapse threat grid ─── */
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
 
 @media screen and (max-width: 560px) {
 	.threat-grid {
@@ -533,11 +661,13 @@ body.deep-dark::after {
 	}
 
 	.header-logo {
-		width: 110px;
+		width: 100px;
 	}
 
 	.dark-mode-toggle {
 		top: 0.5rem;
 		right: 0.5rem;
+		font-size: 0.65rem;
+		padding: 0.3rem 0.6rem;
 	}
 }
