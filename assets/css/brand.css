@@ -348,6 +348,175 @@ article strong {
 	text-transform: uppercase;
 }
 
+/* ─── Logo Image ─── */
+
+#header .logo.logo-img {
+	/* Override the default circular logo container */
+	width: auto;
+	height: auto;
+	border: none;
+	background: none;
+	border-radius: 0;
+	line-height: 1;
+	margin-bottom: 1.2rem;
+}
+
+.header-logo {
+	width: 120px;
+	height: auto;
+	/* True transparent PNG - no blend mode needed */
+	filter: drop-shadow(0 2px 12px rgba(0, 168, 232, 0.3));
+	opacity: 0.95;
+	transition: opacity 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.header-logo:hover {
+	opacity: 1;
+	transform: scale(1.04);
+	filter: drop-shadow(0 4px 18px rgba(0, 168, 232, 0.55));
+}
+
+/* ─── Dark Mode Toggle ─── */
+
+.dark-mode-toggle {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 9999;
+	background: rgba(13, 27, 62, 0.85);
+	border: 1px solid rgba(0, 168, 232, 0.35);
+	border-radius: 20px;
+	padding: 0.35rem 0.75rem;
+	cursor: pointer;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #4FC3F7;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	transition: background 0.2s, border-color 0.2s;
+	backdrop-filter: blur(8px);
+}
+
+.dark-mode-toggle:hover {
+	background: rgba(0, 168, 232, 0.15);
+	border-color: rgba(0, 168, 232, 0.6);
+}
+
+.dark-mode-toggle .toggle-icon {
+	font-size: 0.9rem;
+}
+
+/* ─── Dark Mode Overrides ─── */
+/* The Dimension template is already dark by default.
+   "Dark mode" for IT pros here means DEEPER dark — richer contrast,
+   more terminal-like feel. */
+
+body.deep-dark {
+	--dm-bg: #020810;
+	--dm-panel: rgba(2, 8, 16, 0.97);
+	--dm-accent: #00E5FF;
+	--dm-border: rgba(0, 229, 255, 0.2);
+}
+
+body.deep-dark #bg {
+	filter: brightness(0.4) saturate(0.6);
+}
+
+body.deep-dark #wrapper {
+	background: rgba(2, 8, 16, 0.6);
+}
+
+body.deep-dark #header {
+	background: rgba(2, 8, 16, 0.5);
+}
+
+body.deep-dark article {
+	background: rgba(2, 8, 16, 0.97) !important;
+	border-color: rgba(0, 229, 255, 0.15) !important;
+}
+
+body.deep-dark article h2.major::after {
+	background-color: #00E5FF;
+}
+
+body.deep-dark article h3 {
+	color: #00E5FF;
+	border-bottom-color: rgba(0, 229, 255, 0.2);
+}
+
+body.deep-dark #header .brand-tagline {
+	color: #00E5FF;
+}
+
+body.deep-dark .pillar-card {
+	background: rgba(0, 20, 30, 0.8);
+	border-color: rgba(0, 229, 255, 0.2);
+	border-left-color: #00E5FF;
+}
+
+body.deep-dark .pillar-card strong {
+	color: #00E5FF;
+}
+
+body.deep-dark .threat-card {
+	background: rgba(0, 229, 255, 0.04);
+	border-color: rgba(0, 229, 255, 0.15);
+}
+
+body.deep-dark .threat-card .icon {
+	color: #00E5FF;
+}
+
+body.deep-dark .platform-card {
+	background: rgba(0, 229, 255, 0.04);
+	border-color: rgba(0, 229, 255, 0.15);
+}
+
+body.deep-dark .platform-card:hover {
+	background: rgba(0, 229, 255, 0.08);
+	border-color: rgba(0, 229, 255, 0.35);
+}
+
+body.deep-dark .platform-card .icon {
+	color: #00E5FF;
+}
+
+body.deep-dark .cta-block {
+	border-left-color: #00E5FF;
+	background: rgba(0, 229, 255, 0.04);
+	border-color: rgba(0, 229, 255, 0.15);
+}
+
+body.deep-dark .topic-tags li {
+	color: #00E5FF;
+	background: rgba(0, 229, 255, 0.07);
+	border-color: rgba(0, 229, 255, 0.2);
+}
+
+body.deep-dark .mission-icon {
+	color: #00E5FF;
+}
+
+/* Scanline overlay for deep dark - subtle terminal feel */
+body.deep-dark::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(0, 229, 255, 0.012) 2px,
+		rgba(0, 229, 255, 0.012) 4px
+	);
+	pointer-events: none;
+	z-index: 9998;
+}
+
 /* ─── Responsive: narrow screens collapse threat grid ─── */
 
 @media screen and (max-width: 560px) {
@@ -361,5 +530,14 @@ article strong {
 
 	.cta-links {
 		flex-direction: column;
+	}
+
+	.header-logo {
+		width: 110px;
+	}
+
+	.dark-mode-toggle {
+		top: 0.5rem;
+		right: 0.5rem;
 	}
 }
